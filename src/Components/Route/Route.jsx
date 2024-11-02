@@ -1,11 +1,12 @@
-import React from 'react';
+import { createBrowserRouter } from "react-router-dom";
+import App from "../../App";
 
-const Route = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
 
-export default Route;
+
+
+export const route = createBrowserRouter([
+    {
+        path:'/',
+        element:<App></App>
+    }
+])
