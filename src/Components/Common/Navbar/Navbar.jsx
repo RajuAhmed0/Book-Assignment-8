@@ -34,7 +34,7 @@ const Navbar = () => {
                                 Home
                             </NavLink>
                             <NavLink
-                                to="/booksList"
+                                // to="/booksList"
                                 className={({ isActive }) =>
                                     isActive ? " font-semibold text-[#23BE0A] text-lg " : "text-lg text-[#131313CC]"
                                 }
