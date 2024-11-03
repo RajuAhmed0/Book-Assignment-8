@@ -1,28 +1,32 @@
 import React from 'react';
 import { FaRegStar } from 'react-icons/fa';
 
-const BooksCard = () => {
+const BooksCard = ({books}) => {
+
+    const {image, tags, bookName, author, category, rating} = books;
     return (
         <div>
-            <div className="card w-[374px] border border-[#13131326] p-6">
-                <figure className="bg-[#F3F3F3]">
+            <div className="card max-w-[374px] border border-[#13131326] xl:p-6 p-3">
+                <figure className="bg-[#F3F3F3] rounded-2xl">
                     <img
-                        src="https://i.ibb.co.com/bWPPTqv/kindpng-7318921.png"
-                        alt="Shoes"
-                        className="rounded-xl py-8" />
+                        src={image}
+                        alt="Books"
+                        className="rounded-xl py-8 max-w-min" />
                 </figure>
-                <div className="mt-6 ">
-                    <div className='flex gap-3 mb-4'>
-                        <p className='bg-[#23BE0A0D] text-[#23BE0A] px-4 py-[7] rounded-[30px] font-medium'>young</p>
-                        <p className='bg-[#23BE0A0D] text-[#23BE0A] px-4 py-[7] rounded-[30px] font-medium'>hello</p>
+                <div className="md:mt-6 mt-3 ">
+                    <div className='flex gap-3 md:mb-4 mb-2'>
+                        {
+                            tags?.map((tag, i) => <p key={i} className='bg-[#23BE0A0D] md:text-base text-[8px] text-[#23BE0A] md:px-4 px-2 py-[7] rounded-[30px] font-medium'>{tag}</p>)
+                        }
+                        {/* <p className='bg-[#23BE0A0D] text-[#23BE0A] px-4 py-[7] rounded-[30px] font-medium'>hello</p> */}
                     </div>
-                    <h3 className='text-[#131313] text-2xl font-bold platFont mb-4'>The Catcher in the Rye</h3>
-                    <p className='text-[#131313CC] font-medium'>By : Awlad Hossain</p>
-                    <div className='border border-dashed border-[#13131326] my-5'></div>
-                    <div className='flex justify-between text-[#131313CC]'>
-                        <p>Fiction</p>
+                    <h3 className='text-[#131313] md:text-2xl text-sm  font-bold platFont md:mb-4 mb-1'>{bookName}</h3>
+                    <p className='text-[#131313CC] font-medium md:text-base text-xs'>By : {author}</p>
+                    <div className='border border-dashed border-[#13131326] md:my-5 my-2'></div>
+                    <div className='flex justify-between text-[#131313CC] md:text-base text-xs'>
+                        <p>{category}</p>
                         <div className='flex gap-2 items-center '>
-                            <p>2.32</p>
+                            <p>{rating}</p>
                             <FaRegStar />
                         </div>
                     </div>
