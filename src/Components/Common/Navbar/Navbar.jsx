@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -34,7 +34,7 @@ const Navbar = () => {
                                 Home
                             </NavLink>
                             <NavLink
-                                // to="/booksList"
+                                to="/booksList"
                                 className={({ isActive }) =>
                                     isActive ? " font-semibold text-[#23BE0A] text-lg " : "text-lg text-[#131313CC]"
                                 }
@@ -51,7 +51,7 @@ const Navbar = () => {
                             </NavLink>
                         </ul>
                     </div>
-                    <a className="text-[#131313] md:text-[28px] text-xl font-bold">Book Vibe</a>
+                    <Link typeof={'/'} className="text-[#131313] md:text-[28px] text-xl font-bold">Book Vibe</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex gap-4">

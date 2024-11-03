@@ -4,7 +4,7 @@ import BooksCard from './BooksCard';
 const Books = () => {
 
     const [booksData, setBooksData] = useState([]);
-    console.log(booksData);
+    // console.log(booksData);
     
 
     useEffect(() => {
