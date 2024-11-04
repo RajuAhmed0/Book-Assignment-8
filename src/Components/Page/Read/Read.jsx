@@ -42,7 +42,7 @@ const Read = ({ data }) => {
                         <button className=" bg-[#328EFF26] text-[#328EFF] rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[11px] py-0"> Category : {category}</button>
                         <button className=" bg-[#FFAC3326] text-[#FFAC33] rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[11px] py-0">Rating : {rating}</button>
                         <Link to={`/books/${bookId}`}>
-                            <button className=" bg-[#23BE0A] text-white hover:text-black xl:text-lg font-medium rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[10px] py-1">View Details</button>
+                            <button className=" bg-[#23BE0A] text-white hover:text-black xl:text-lg font-medium rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[10px] py-2">View Details</button>
                         </Link>
                     </div>
                 </div>
