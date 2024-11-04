@@ -18,7 +18,7 @@ const BooksCard = ({books}) => {
                 <div className="md:mt-6 mt-3 ">
                     <div className='flex gap-3 md:mb-4 mb-2'>
                         {
-                            tags?.map((tag, i) => <p key={i} className='bg-[#23BE0A0D] md:text-base text-[8px] text-[#23BE0A] md:px-4 px-2 py-[7] rounded-[30px] font-medium'>{tag}</p>)
+                            tags?.map((tag, i) => <p key={i} className='bg-[#23BE0A0D] md:text-base text-[7px] text-[#23BE0A] md:px-4 px-2 py-[7] rounded-[30px] font-medium'>{tag}</p>)
                         }
                         {/* <p className='bg-[#23BE0A0D] text-[#23BE0A] px-4 py-[7] rounded-[30px] font-medium'>hello</p> */}
                     </div>
