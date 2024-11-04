@@ -19,16 +19,16 @@ export const route = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path:"/books/:bookId",
-                element:<BookDetails></BookDetails>,
+                path: "/books/:bookId",
+                element: <BookDetails></BookDetails>,
                 loader: () => fetch("books.json"),
-              
+
             },
             {
                 index: true,
                 path: "/booksList",
                 element: <ListedBooks></ListedBooks>,
-              },
+            },
 
         ]
     }

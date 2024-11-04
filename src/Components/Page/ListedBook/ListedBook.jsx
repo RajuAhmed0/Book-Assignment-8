@@ -1,27 +1,25 @@
 import { useEffect, useState } from "react";
-
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
 import "react-tabs/style/react-tabs.css";
-// import WishList from "../WishList/WishList";
 import Read from "../Read/Read";
+import WishList from "../WishList/WishList";
 
 const ListedBooks = () => {
     const [read, setRead] = useState([]);
     const [wish, setWish] = useState([]);
 
 
-    //    for wish list
+
     useEffect(() => {
         const showWishList = JSON.parse(localStorage.getItem("wish")) || [];
         setWish(showWishList);
     }, []);
-    //     for read list
+
     useEffect(() => {
         const showDataRead = JSON.parse(localStorage.getItem("books")) || [];
         setRead(showDataRead);
     }, []);
- 
+
 
 
     return (
@@ -44,13 +42,13 @@ const ListedBooks = () => {
                         ))}
                     </p>
                 </TabPanel>
-                {/* <TabPanel>
-          <div>
-            {wish.map((w) => (
-              <WishList w={w} key={w.id}></WishList>
-            ))}
-          </div>
-        </TabPanel> */}
+                <TabPanel>
+                    <div>
+                        {wish.map((w) => (
+                            <WishList w={w} key={w.id}></WishList>
+                        ))}
+                    </div>
+                </TabPanel>
             </Tabs>
         </div>
     );

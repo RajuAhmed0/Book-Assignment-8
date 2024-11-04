@@ -17,13 +17,13 @@ const BookDetails = () => {
     const handelRead = () => {
         // console.log('ccc');
         getLocalStorage(details)
-    
-      }
-      const handelWL = () => {
+
+    }
+    const handelWL = () => {
         // console.log('click');
         setLocalStorage(details)
-    
-      }
+
+    }
 
 
 

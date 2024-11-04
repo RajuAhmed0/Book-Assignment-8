@@ -3,10 +3,9 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { HiMiniUsers } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
-const Read = ({ data }) => {
-    //  console.log(data);
-    const { bookName, author, image, totalPages, rating, tags, publisher, yearOfPublishing, category, bookId, } = data;
 
+const WishList = ({ w }) => {
+    const { bookName, author, image, totalPages, rating, tags, publisher, yearOfPublishing, category } = w
     return (
         <div className="md:mt-6 mt-3">
             <div className="flex rounded-2xl  border border-[#13131399] mb:p-6 p-3 md:gap-6 gap-3">
@@ -41,8 +40,8 @@ const Read = ({ data }) => {
                     <div className="flex gap-3">
                         <button className=" bg-[#328EFF26] text-[#328EFF] rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[11px] py-0"> Category : {category}</button>
                         <button className=" bg-[#FFAC3326] text-[#FFAC33] rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[11px] py-0">Rating : {rating}</button>
-                        <Link to={`/books/${bookId}`}>
-                            <button className=" bg-[#23BE0A] text-white hover:text-black xl:text-lg font-medium rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[10px] py-1">View Details</button>
+                        <Link to={"/"}>
+                            <button className=" bg-[#23BE0A] text-white hover:text-black xl:text-lg font-medium rounded-[30px] lg:text-base md:text-sm text-[6px] lg:px-5 md:px-3 px-1 md:py-[10px] py-1">Back Home</button>
                         </Link>
                     </div>
                 </div>
@@ -51,4 +50,4 @@ const Read = ({ data }) => {
     );
 };
 
-export default Read;
+export default WishList;
