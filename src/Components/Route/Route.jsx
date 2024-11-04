@@ -3,6 +3,7 @@ import App from "../../App";
 import Home from "../Page/Home/Home";
 import BookDetails from "../Page/BookDetails/BookDetails";
 import ListedBooks from "../Page/ListedBook/ListedBook";
+import ChartPage from "../Page/ChartPage/ChartPage";
 
 
 
@@ -29,6 +30,10 @@ export const route = createBrowserRouter([
                 path: "/booksList",
                 element: <ListedBooks></ListedBooks>,
             },
+            {
+                path: "/pages",
+                element:<ChartPage></ChartPage>,
+              },
 
         ]
     }
