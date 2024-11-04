@@ -4,6 +4,7 @@ import Home from "../Page/Home/Home";
 import BookDetails from "../Page/BookDetails/BookDetails";
 import ListedBooks from "../Page/ListedBook/ListedBook";
 import ChartPage from "../Page/ChartPage/ChartPage";
+import ErrorPage from "../Page/ErrorPage/ErrorPage";
 
 
 
@@ -14,6 +15,7 @@ export const route = createBrowserRouter([
     {
         path: "/",
         element: <App></App>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
